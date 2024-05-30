@@ -1,4 +1,5 @@
-# Pegasus Detection API
+i Pegasus Detection API
+The purpose of the project is to create a softaware that detect the spyware that enable every user to know if their gadget has pegasus which will enable them to detect it and also uninstall the spyware for the user.
 
 This project is designed to detect and analyze Pegasus spyware using various methods including network traffic analysis, memory forensics, file system analysis, and mobile device analysis.
 
