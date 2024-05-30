@@ -17,8 +17,10 @@ class NetworkAnalysisResponse(BaseModel):
 @router.post("/analyze", response_model=NetworkAnalysisResponse, dependencies=[Depends(validate_token)])
 def analyze_network(request: NetworkAnalysisRequest):
     try:
-        packets = scapy.sniff(filter=request.filter, count=request.count)
+        packets = scapy.sniff(filter=request.filter, count=request.count, timeout=10)
         results = [{"summary": packet.summary()} for packet in packets]
         return {"status": "success", "results": results}
+    except scapy.Scapy_Exception as e:
+        raise HTTPException(status_code=500, detail=f"Scapy error: {str(e)}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -46,6 +46,19 @@ This project is designed to detect and analyze Pegasus spyware using various met
 
 - `/network/analyze`: Analyze network traffic
 - `/memory/analyze`: Analyze memory dump
-- `/file/analyze`: Analyze file system
-- `/mobile/analyze`: Analyze mobile device backup
+(POST /file/analyze): Analyze file system images.
+Mobile Device Analysis (POST /mobile/analyze): Analyze mobile device backups.
+Environment Variables
+Specifies any required environment variables:
 
+SECRET_KEY: Secret key for JWT authentication.
+Utility Functions
+Describes utility functions used within the project:
+
+save_upload_file: Saves the uploaded file to a temporary directory.
+validate_token: Validates JWT tokens for authentication.
+Project Structure
+Outlines the project's directory and file structure, showing how the files are organized.
+
+Contributing
+Encourages contributions to the project and explains how to contribute, usually by forking the repository and submitting a pull request.

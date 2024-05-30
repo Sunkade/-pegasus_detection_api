@@ -10,8 +10,10 @@ def analyze_mobile_device(mobile_data: UploadFile = File(...)):
         file_location = save_upload_file(mobile_data)
         results = subprocess.run(
             ["mvt-ios", "check-backup", file_location],
-            capture_output=True, text=True
+            capture_output=True, text=True, check=True
         )
-        return {"status": "success", "results": results.stdout}
+        return {"status": "success", "results": results.stdout.splitlines()}
+    except subprocess.CalledProcessError as e:
+        raise HTTPException(status_code=500, detail=f"MVT error: {e.stderr}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
