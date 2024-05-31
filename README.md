@@ -1,6 +1,14 @@
-i Pegasus Detection API
+ Pegasus Detection API
 The purpose of the project is to create a softaware that detect the spyware that enable every user to know if their gadget has pegasus which will enable them to detect it and also uninstall the spyware for the user.
+The project idea of developing a backend system to detect and analyze Pegasus spyware is not entirely unique, as cybersecurity researchers and organizations have been working on detecting and analyzing Pegasus spyware for several years. However, implementing a project like this specifically with FastAPI and creating a structured API for various analysis methods (network traffic analysis, memory forensics, file system analysis, and mobile device analysis) can still be a novel and valuable contribution, especially in an educational or smaller-scale professional context.
 
+Unique Aspects of my Project
+Integration of Multiple Analysis Methods:
+
+Combining network traffic analysis, memory forensics, file system analysis, and mobile device analysis in a single API is a comprehensive approach that is not commonly found in publicly available tools.
+Use of Modern Technologies:
+
+Using FastAPI for creating the API provides a modern, efficient framework that is gaining popularity but is not yet as widely adopted as older frameworks like Flask or Django.
 This project is designed to detect and analyze Pegasus spyware using various methods including network traffic analysis, memory forensics, file system analysis, and mobile device analysis.
 
 ## Requirements
@@ -63,3 +71,4 @@ Outlines the project's directory and file structure, showing how the files are o
 
 Contributing
 Encourages contributions to the project and explains how to contribute, usually by forking the repository and submitting a pull request.
+Also is a web application backend it provides a service system for detecting a analysis of spyware user can interact with this backend system through. It request typically made via a web interface or Api client the backend doesn't include a user interface it serves as the underlying interface sofware or web application require pegasus an as an open source contribution for all developers:
